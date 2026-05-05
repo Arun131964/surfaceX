@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 
 Install external tools:
-```bash
+
 go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/tomnomnom/assetfinder@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
