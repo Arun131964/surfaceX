@@ -30,6 +30,7 @@ Installation
 ```bash
 git clone https://github.com/YOUR_USERNAME/recon-tool.git
 cd recon-tool
+pip install -r requirements.txt
 
 
 Install external tools:
@@ -41,4 +42,3 @@ go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install github.com/owasp-amass/amass/v4/...@latest
 
-pip install -r requirements.txt
