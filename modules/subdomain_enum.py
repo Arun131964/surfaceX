@@ -40,4 +40,7 @@ def get_all_subdomains(domain):
     print("[*] Running assetfinder...")
     subs |= run_tool(f"assetfinder --subs-only {domain}")
 
+    print("[*] Running amass (passive)...")
+    subs |= run_tool(f"amass enum -passive -d {domain}")
+
     return list(subs)
