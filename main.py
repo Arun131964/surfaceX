@@ -6,6 +6,7 @@ from modules.subdomain_enum import get_all_subdomains
 from modules.alive_check import check_alive
 from modules.url_fetch import get_urls
 from modules.vuln_scan import find_params
+from modules.vuln_scan import test_xss
 
 
 def save(file, data):
@@ -66,6 +67,11 @@ def main():
     params = find_params(urls)
     save(f"{output_dir}/params.txt", params)
     print(f"[+] Potential params: {len(params)}")
+
+    print("[+] Testing for XSS...")
+    xss = test_xss(params)
+    save(f"{output_dir}/xss.txt", xss)
+    print(f"[+] XSS found: {len(xss)}")
 
     print("[✓] Recon Completed!")
 
